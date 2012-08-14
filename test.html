@@ -1,0 +1,56 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Test page</title>
+<script src='jquery.js'></script>
+<style>
+.page{
+	border:1px solid #ccc;
+	width:300px;
+	height:50px;
+	overflow:auto;
+}
+</style>
+</head>
+<body>
+<div style='float:left;background:#ccc' id='d1'>
+	div1
+</div>
+<div id='d2' style="width:100px;height:30px;">
+	<div id='dd1' >div2</div>
+	<div >div2ff</div>
+	<div >div2</div>
+	<div >div3</div>
+	<div id='dd4' >div4</div>
+</div>
+<script>
+//alert($('#d1').width());//alert 35;
+//alert($('#d2').width());//alert the width of my srceen
+
+
+
+$(document).ready(function() {
+
+	var old_body = $('body').clone();
+	
+	function getNext(dom){
+		if($(dom).next().size() > 0) return $(dom).next();
+		do{
+			dom = $(dom).parent();
+			if($(dom).parent().parent().parent().size() == 0) 
+				return false;//dom is body
+		}while($(dom).next().size() == 0)
+		return $(dom).next();
+	}
+	
+	var next = $('#dd1');
+	
+	//alert($(next).parent().next().size());
+	while(next = getNext(next)) alert($(next).html());
+	//alert($('body').next().size());
+})
+
+</script>
+<div id='aaa'>aa</div>
+</body>
+</html>

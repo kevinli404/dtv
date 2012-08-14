@@ -1,0 +1,7 @@
+body{
+}
+.dtv-page{
+margin:0 auto;
+border:1px solid red;
+overflow:auto;
+}
