@@ -1,7 +1,47 @@
 body{
 }
+#dtv-header{
+	padding-top:10px;
+	width:100%;
+	height:60px;
+	margin:0 auto;
+	border-bottom:1px solid red;
+	overflow:hidden;
+}
+
+#dtv-addr{
+	width:40%;
+	float:left;
+	text-align:right:
+}
+#dtv-addr > form > input{
+	width:80%;
+	height:30px;
+}
+#dtv-addr > form > input[type=submit]{
+	width:15%;
+	height:37px;
+}
+#dtv-nav{
+	width:60%;
+	overflow:hidden;
+	float:left;
+}
+#dtv-nav .dtv-page-nav{
+	text-align:center;
+	float:left;
+	font-size:20px;
+}
+#dtv-nav .dtv-page-nav:hover{
+	cursor:pointer;
+	background:#8aa9ee;
+	color:#fff;
+}
+#dtv-nav .curr-page{
+	background:#3f6edb;
+	color:#fff;
+}
 .dtv-page{
 margin:0 auto;
-border:1px solid red;
 overflow:auto;
 }

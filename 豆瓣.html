@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html class="ua-linux ua-ff14" lang="zh-CN"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta content="提供图书、电影、音乐唱片的推荐、评论和价格比较，以及城市独特的文化生活。" name="description">
+<title>豆瓣</title>
+<script async="true" src="%E8%B1%86%E7%93%A3_files/packed_ad533989358.js" type="text/javascript"></script><script>
+window.Douban=window.Douban||{};var Do=function(){Do.actions.push([].slice.call(arguments))};Do.ready=function(){Do.actions.push([].slice.call(arguments))};Do.add=Do.define=function(a,b){Do.mods[a]=b};Do.global=function(){Do.global.mods=Array.prototype.concat(Do.global.mods,[].slice.call(arguments))};Do.global.mods=[];Do.mods={};Do.actions=[];function set_cookie(g,f,d,e){var b=new Date(),a,c;b.setTime(b.getTime()+((f||30)*24*60*60*1000));a="; expires="+b.toGMTString();for(c in g){document.cookie=c+"="+g[c]+a+"; domain="+(d||"douban.com")+"; path="+(e||"/")}}function get_cookie(b){var e=b+"=",a=document.cookie.split(";"),d,f;for(d=0;d<a.length;d++){f=a[d];while(f.charAt(0)==" "){f=f.substring(1,f.length)}if(f.indexOf(e)===0){return f.substring(e.length,f.length).replace(/\"/g,"")}}return null}Douban.init_show_login=function(a){Do("dialog",function(){var b="/j/misc/login_form";dui.Dialog({title:"登录",url:b,width:350,cache:true,callback:function(c,d){d.node.addClass("dialog-login");d.node.find("h2").css("display","none");d.node.find(".hd h3").replaceWith(d.node.find(".bd h3"));d.node.find("form").css({border:"none",width:"auto",padding:"0"});d.updateSize();d.updatePosition()}}).open()})};Do(function(){$.ajax_withck=function(a){if(a.type=="POST"){a.data=$.extend(a.data||{},{ck:get_cookie("ck")})}return $.ajax(a)};$.postJSON_withck=function(a,b,c){$.post_withck(a,b,c,"json")};$.post_withck=function(a,c,d,b){if($.isFunction(c)){b=d;d=c;c={}}return $.ajax({type:"POST",url:a,data:$.extend(c,{ck:get_cookie("ck")}),success:d,dataType:b||"text"})};$("html").click(function(c){var a=$(c.target),b=a.attr("class");if(!b){return}$(b.match(/a_(\w+)/gi)).each($.proxy(function(d,f){var e=Douban[f.replace(/^a_/,"init_")];if(typeof e==="function"){c.preventDefault();e.call(this,c)}},a[0]))})});
+Do.add('dialog', {path: 'http://img3.douban.com/js/ui/packed_dialog429925323.js', type: 'js', requires: ['http://img3.douban.com/css/ui/packed_dialog4563741467.css']});
+Do.global('http://img3.douban.com/js/sns/fp/packed_base7286915874.js', 'dialog');
+</script>
+<link rel="stylesheet" href="%E8%B1%86%E7%93%A3_files/packed__init_2923304827.css">
+<link rel="stylesheet" href="%E8%B1%86%E7%93%A3_files/packed_old8508648628.css">
+<style type="text/css">
+    #dale_anonymous_home_page_top_middle { font-size:0;margin-bottom:20px; }
+    
+.notify-mod { clear:both;margin:0 0 20px;padding:12px 0;background:#f5f4f6;line-height:1.2;overflow:hidden;text-align:center; }
+
+.mobile-app-entrance { overflow: hidden; }
+.mobile-app-entrance .entrance-link { display: block; position: relative; padding: 10px; height: 50px; margin-top: 10px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; }
+.mobile-app-entrance .entrance-link.first-link { margin-top: 0; }
+.mobile-app-entrance .entrance-link,
+.mobile-app-entrance .entrance-link:link,
+.mobile-app-entrance .entrance-link:visited,
+.mobile-app-entrance .entrance-link:active,
+.mobile-app-entrance .entrance-link:hover { background: #f1f1f1 url("http://img3.douban.com/pics/app/arrw.png") no-repeat scroll 97% 50%; outline: none; color: #4e4e4e; }
+.mobile-app-entrance .app-icon { width: 50px; height: 50px; float: left; margin-right: 13px; background: url("http://img1.douban.com/pics/app/app_icons_50.png") no-repeat; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; -webkit-box-shadow: 1px 1px 2px #999; -moz-box-shadow: 1px 1px 2px #999; box-shadow: 1px 1px 2px #999; }
+.mobile-app-entrance .main-title,
+.mobile-app-entrance .sub-title { display: block; }
+.mobile-app-entrance .main-title { color: #204d92; font-size: 16px; font-weight: bold; line-height: 1; padding-top: 9px; }
+.mobile-app-entrance .app-list { background: #f1f1f1; padding: 14px 21px 8px; font-size: 0; }
+.mobile-app-entrance .app-list .app-item { display: inline-block; *display: inline; *zoom: 1; width: 50px; margin-right: 25px; }
+.mobile-app-entrance .app-item .app-link { display: block; text-align: center; color: #4e4e4e; font-size: 12px; }
+.mobile-app-entrance .app-item .app-link:hover { background: transparent; color: #4e4e4e; }
+.mobile-app-entrance .app-item .app-icon { margin-right: none; float: none; display: block; margin: 0 0 8px 0; }
+
+/* SNS Index */
+.mobile-app-entrance.app-main .entrance-link { background-image: none; height: 57px; padding: 15px 15px 15px 21px; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; }
+.mobile-app-entrance.app-main .main-title { font-size: 18px; padding-top: 10px; }
+.mobile-app-entrance.app-main .sub-title { font-size: 14px; }
+.mobile-app-entrance.app-main .app-icon { width: 72px; height: 58px; background: url("http://img3.douban.com/pics/app/mobile_app_icon.png") no-repeat; float: right; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; }
+
+/* Update */
+.mobile-app-entrance.app-update { margin-top: 20px; }
+
+/* Movie */
+.mobile-app-entrance.app-movie { margin-top: 20px; }
+
+/* App Icons */
+.mobile-app-entrance .app-icon.icon-read { background-position: 0 0; }
+.mobile-app-entrance .app-icon.icon-update { background-position: 0 -150px; }
+.mobile-app-entrance .app-icon.icon-fm { background-position: 0 -250px; }
+.mobile-app-entrance .app-icon.icon-fm-ipad { background-position: 0 -300px; }
+.mobile-app-entrance .app-icon.icon-movie { background-position: 0 -350px; }
+.mobile-app-entrance .app-icon.icon-artists { background-position: 0 -50px; }
+.mobile-app-entrance .app-icon.icon-cart { background-position: 0 -200px; }
+.mobile-app-entrance .app-icon.icon-location { background-position: 0 -100px; }
+.mobile-app-entrance .app-icon.icon-read-notes { background-position: 0 -400px; }
+</style>
+</head>
+<link rel="stylesheet" type="text/css" href="dtv.css" /> 
+
+<body>
+    
+    <div class="anony-nav">
+        <div class="hd-wrap">
+            <div class="hd">
+                <div class="logo">
+                    <h1><a href="http://www.douban.com/">豆瓣</a></h1>
+                </div>
+                <div class="top-nav-items">
+                <ul>
+                <li> <a target="_blank" class="lnk-book" href="http://book.douban.com/">豆瓣读书</a><i></i> </li>
+                <li> <a target="_blank" class="lnk-movie" href="http://movie.douban.com/">豆瓣电影</a><i></i> </li>
+                <li> <a target="_blank" class="lnk-music" href="http://music.douban.com/">豆瓣音乐</a><i></i> </li>
+                <li> <a target="_blank" class="lnk-events" href="http://www.douban.com/location/">豆瓣同城</a><i></i> </li>
+                <li> <a target="_blank" class="lnk-fm" href="http://douban.fm/">豆瓣FM</a><i></i> </li>
+                <li> <a target="_blank" class="lnk-9" href="http://9.douban.com/">九点</a> </li>
+                </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="bd">
+            <div class="reg">
+                
+                <strong>豆瓣社区</strong>
+                <div>
+                <b>747个城市</b>
+                <b>6286万居民</b>
+                <b>29万个兴趣小组</b>
+                <br>
+                <em>75745个小站</em>
+                <em>20339个独立音乐人</em>
+                <em>2615个作者译者</em>
+                <em>1733家电影院</em>
+                </div>
+                <a href="http://www.douban.com/accounts/register" class="lnk-reg"><strong>加入我们</strong>注册</a>
+            </div>
+            
+<div class="login">
+    <form id="lzform" name="lzform" method="post" action="https://www.douban.com/accounts/login">
+        <fieldset>
+            <legend>登录</legend>
+            <input value="index_nav" name="source" type="hidden">
+            <div class="item">
+                <label for="form_email">帐&nbsp;&nbsp;号: </label>
+                <input style="color: rgb(204, 204, 204);" name="form_email" id="form_email" value="邮箱/手机号" tabindex="1" type="text">
+            </div>
+            <div class="item">
+                <label for="form_password">密&nbsp;&nbsp;码: </label>
+                <input name="form_password" id="form_password" class="text" tabindex="2" type="password">
+                <a href="http://www.douban.com/accounts/resetpassword">忘记密码</a>
+            </div>
+            <div class="item1">
+                <label for="form_remember"><input name="remember" id="form_remember" tabindex="3" type="checkbox">
+                记住我</label>
+            </div>
+            <div class="item1">
+                <input value="登 &nbsp; 录" class="bn-submit" tabindex="4" type="submit">
+            </div>
+        </fieldset>
+    </form>
+    <div style="display:none;">
+        <img src="%E8%B1%86%E7%93%A3_files/blank.gif" onload="(function(url){document.getElementById('lzform').action=url;})('https://www.douban.com/accounts/login')">
+    </div>
+    
+</div>
+
+        </div>
+    </div>
+
+
+    <div id="wrapper">
+        <div id="bd">
+            <h1>你可能喜欢</h1>
+            <div class="main">
+                
+    
+    <div class="guess-list">
+       
+
+
+
+
+    
+    
+<div class="section">
+  
+
+
+
+
+<div class="item-a item-subject">
+<a hidefocus="" href="http://movie.douban.com/subject/11592990/" class="item" target="_blank" onclick="moreurl(this,{fromguess:'I_11592990-K_1002-T_U', row:0, index:0, random_key:'134502477757336e5f'})">
+      
+
+
+<div class="pic">
+    <img alt="晚上10点到凌晨3点" src="%E8%B1%86%E7%93%A3_files/s11172642.jpg" data-src="http://img1.douban.com/lpic/s11172642.jpg" height="120">
+</div>
+
+<div class="title">
+    <h3>晚上10点到凌晨3点</h3>
+    <span class="artist"></span>
+    
+        
+    <div class="rating">
+      <span class="rating-stars rating-star4">★★★☆☆</span><b>6.6</b>
+    </div>
+</div>
+  <div class="desc">
+  <div class="inner">都市裡的男女到底都在做些什麼？<span class="br"></span>據說，台北是全世界都市的一個縮影。<span class="br"></span>這是最真實的台北，在這個城市裡面，除了錢...</div>
+  </div>
+</a>
+
+
+
+</div>
+
+  
+
+
+
+
+<div class="item-a item-subject">
+<a hidefocus="" href="http://movie.douban.com/subject/10797041/" class="item" target="_blank" onclick="moreurl(this,{fromguess:'I_10797041-K_1002-T_U', row:0, index:1, random_key:'134502477757336e5f'})">
+      
+
+
+<div class="pic">
+    <img alt="真相访谈" src="%E8%B1%86%E7%93%A3_files/s10387328.jpg" data-src="http://img3.douban.com/lpic/s10387328.jpg" height="120">
+</div>
+
+<div class="title">
+    <h3>真相访谈</h3>
+    <span class="artist"></span>
+    
+        
+    <div class="rating">
+      <span class="rating-stars rating-star4">★★★★☆</span><b>9.7</b>
+    </div>
+</div>
+  <div class="desc">
+  <div class="inner">制作人：: Kiran Rao , Aamir Khan<span class="br"></span>Aamir's First TV Show Satyamev Jayate. Watch on Star Plus every Sunday fro...</div>
+  </div>
+</a>
+
+
+
+</div>
+
+  
+
+
+
+
+<div class="item-a item-subject">
+<a hidefocus="" href="http://music.douban.com/subject/2131368/" class="item" target="_blank" onclick="moreurl(this,{fromguess:'I_2131368-K_1003-T_U', row:0, index:2, random_key:'134502477757336e5f'})">
+      
+
+
+<div class="pic">
+    <img alt="Once (Soundtrack)" src="%E8%B1%86%E7%93%A3_files/s2821080.jpg" data-src="http://img1.douban.com/lpic/s2821080.jpg" height="90">
+</div>
+
+<div class="title">
+    <h3>Once (Soundtrack)</h3>
+    <span class="artist">表演者: Glen Hansard,Marketa Irglova</span>
+    
+        
+    <div class="rating">
+      <span class="rating-stars rating-star4">★★★★☆</span><b>9.1</b>
+    </div>
+</div>
+  <div class="desc">
+  <div class="inner">Even those allergic to musicals may be won over by Once, a tender-hearted Irish romance with songs by Czech...</div>
+  </div>
+</a>
+
+
+
+</div>
+
+</div>
+
+    
+    
+<div class="section with-group group-1c">
+  <div class="group">
+  
+
+
+
+
+<div class="item-b">
+<a hidefocus="" href="http://www.douban.com/note/193930649/" class="item" target="_blank" onclick="moreurl(this,{fromguess:'I_193930649-K_1015-T_U', row:1, index:0, random_key:'134502477757336e5f'})">
+      
+
+<div class="title">
+<h3>一段小城关系</h3>
+<div class="source">
+        艾明雅 的日记
+</div>
+</div>
+
+<div class="desc">
+    
+  我的一个发小终于恋爱了。<span class="br"></span>高中时候旁人常常搞不清楚为什么我们俩会成为无话不谈的好朋友，我是那种上自习的时候也要偷偷把头埋在...
+</div>
+</a>
+
+
+
+
+<div class="fav-btn">
+    <a class="a-show-login" data-tkind="1015" data-tid="193930649" href="http://www.douban.com/note/193930649/">3189 <i>♥</i></a>
+</div>
+</div>
+
+  
+
+
+
+
+<div class="item-c">
+<a hidefocus="" href="http://www.douban.com/online/11148052/" class="item" target="_blank" onclick="moreurl(this,{fromguess:'I_11148052-K_2001-T_U', row:1, index:1, random_key:'134502477757336e5f'})">
+      
+
+<div class="title">
+<h3>把你收藏的搞笑图片都拿出来晒晒吧</h3>
+<div class="source">
+         线上活动 / 
+        线上活动 / <b>4497</b> 人参加
+</div>
+
+</div>
+
+<div class="online-desc">
+  
+ &nbsp;<ul class="pics">     <li><img src="%E8%B1%86%E7%93%A3_files/p1670020806.jpg" data-src="http://img3.douban.com/view/photo/icon/public/p1670020806.jpg" width="50"></li>     <li><img src="%E8%B1%86%E7%93%A3_files/p1670020551.jpg" data-src="http://img1.douban.com/view/photo/icon/public/p1670020551.jpg" width="50"></li>     <li><img src="%E8%B1%86%E7%93%A3_files/p1669989315.jpg" data-src="http://img3.douban.com/view/photo/icon/public/p1669989315.jpg" width="50"></li>     <li><img src="%E8%B1%86%E7%93%A3_files/p1669981083.jpg" data-src="http://img1.douban.com/view/photo/icon/public/p1669981083.jpg" width="50"></li>     <li><img src="%E8%B1%86%E7%93%A3_files/p1669965644.jpg" data-src="http://img1.douban.com/view/photo/icon/public/p1669965644.jpg" width="50"></li>     <li><img src="%E8%B1%86%E7%93%A3_files/p1669965293.jpg" data-src="http://img1.douban.com/view/photo/icon/public/p1669965293.jpg" width="50"></li> &nbsp;</ul>
+</div>
+</a>
+
+
+
+
+<div class="fav-btn">
+    <a class="a-show-login" data-tkind="2001" data-tid="11148052" href="http://www.douban.com/online/11148052/">1088 <i>♥</i></a>
+</div>
+</div>
+
+  </div>
+</div>
+
+    
+    
+<div class="section with-group group-1c">
+  <div class="group">
+  
+
+
+
+
+<div class="item-b">
+<a hidefocus="" href="http://www.douban.com/note/230258884/" class="item" target="_blank" onclick="moreurl(this,{fromguess:'I_230258884-K_1015-T_U', row:2, index:0, random_key:'134502477757336e5f'})">
+      
+
+<div class="title">
+<h3>没有人会是百分百正能量，在自己的记事本上开个树洞吧</h3>
+<div class="source">
+        苏豆芽 的日记
+</div>
+</div>
+
+<div class="desc">
+    
+  大家觉得自己木有成功的理由或者借口，都是什么？<span class="br"></span>尝试在你的记事本上，写下这些理由。<span class="br"></span>我们会很纠结于，是什么阻挡了我们前进的脚步！这也是抱...
+</div>
+</a>
+
+
+
+
+<div class="fav-btn">
+    <a class="a-show-login" data-tkind="1015" data-tid="230258884" href="http://www.douban.com/note/230258884/">797 <i>♥</i></a>
+</div>
+</div>
+
+  
+
+
+
+
+<div class="item-c">
+<a hidefocus="" href="http://www.douban.com/online/11237639/" class="item" target="_blank" onclick="moreurl(this,{fromguess:'I_11237639-K_2001-T_U', row:2, index:1, random_key:'134502477757336e5f'})">
+      
+
+<div class="title">
+<h3>那些让我们舍不得注销豆瓣的学习型友邻</h3>
+<div class="source">
+         线上活动 / 
+        线上活动 / <b>3112</b> 人参加
+</div>
+
+</div>
+
+<div class="online-desc">
+  
+ &nbsp;<ul class="pics">     <li><img src="%E8%B1%86%E7%93%A3_files/p1670009366.jpg" data-src="http://img3.douban.com/view/photo/icon/public/p1670009366.jpg" width="50"></li>     <li><img src="%E8%B1%86%E7%93%A3_files/p1669987042.jpg" data-src="http://img1.douban.com/view/photo/icon/public/p1669987042.jpg" width="50"></li>     <li><img src="%E8%B1%86%E7%93%A3_files/p1669943965.jpg" data-src="http://img3.douban.com/view/photo/icon/public/p1669943965.jpg" width="50"></li>     <li><img src="%E8%B1%86%E7%93%A3_files/p1669890247.jpg" data-src="http://img3.douban.com/view/photo/icon/public/p1669890247.jpg" width="50"></li>     <li><img src="%E8%B1%86%E7%93%A3_files/p1669890139.jpg" data-src="http://img5.douban.com/view/photo/icon/public/p1669890139.jpg" width="50"></li>     <li><img src="%E8%B1%86%E7%93%A3_files/p1669721922.jpg" data-src="http://img1.douban.com/view/photo/icon/public/p1669721922.jpg" width="50"></li> &nbsp;</ul>
+</div>
+</a>
+
+
+
+
+<div class="fav-btn">
+    <a class="a-show-login" data-tkind="2001" data-tid="11237639" href="http://www.douban.com/online/11237639/">1719 <i>♥</i></a>
+</div>
+</div>
+
+  </div>
+</div>
+
+    
+    
+<div class="section with-group group-1a">
+  
+
+
+
+
+<div class="item-a">
+<a hidefocus="" href="http://www.douban.com/photos/album/72136260/" class="item" target="_blank" onclick="moreurl(this,{fromguess:'I_72136260-K_1026-T_U', row:3, index:0, random_key:'134502477757336e5f'})">
+      
+
+
+<div class="pic">
+    <img alt="舌尖上的成都-看得我口水直流!!!" src="%E8%B1%86%E7%93%A3_files/p1565371993.jpg" data-src="http://img1.douban.com/view/photo/photo/public/p1565371993.jpg" height="160" width="143">
+</div>
+
+<div class="title">
+    <h3>舌尖上的成都-看得我口水直流!!!</h3>
+<div class="source">
+        蘑菇先生 的相册
+</div>
+</div>
+  <div class="desc"></div>
+</a>
+
+
+
+
+<div class="fav-btn">
+    <a class="a-show-login" data-tkind="1026" data-tid="72136260" href="http://www.douban.com/photos/album/72136260/">823 <i>♥</i></a>
+</div>
+</div>
+
+  <div class="group">
+  
+
+
+
+
+<div class="item-b">
+<a hidefocus="" href="http://www.douban.com/note/230248738/" class="item" target="_blank" onclick="moreurl(this,{fromguess:'I_230248738-K_1015-T_U', row:3, index:1, random_key:'134502477757336e5f'})">
+      
+
+<div class="title">
+<h3>关于信任与安全感</h3>
+<div class="source">
+        莫非思透 的日记
+</div>
+</div>
+
+<div class="desc">
+    
+  我想讨论的是亲密关系中的信任与安全感。<span class="br"></span>恋爱或婚姻中的人们，谁敢说对自己的伴侣有100%的信心，相信对方不会出轨或者疑情别恋？<span class="br"></span>回答N...
+</div>
+</a>
+
+
+
+
+<div class="fav-btn">
+    <a class="a-show-login" data-tkind="1015" data-tid="230248738" href="http://www.douban.com/note/230248738/">828 <i>♥</i></a>
+</div>
+</div>
+
+  
+
+
+
+
+<div class="item-b">
+<a hidefocus="" href="http://www.douban.com/note/230633003/" class="item" target="_blank" onclick="moreurl(this,{fromguess:'I_230633003-K_1015-T_U', row:3, index:2, random_key:'134502477757336e5f'})">
+      
+
+<div class="title">
+<h3>鲜活或干涸</h3>
+<div class="source">
+        没头脑也很高兴 的日记
+</div>
+</div>
+
+<div class="desc">
+    
+  当大家都睡着的时候，我依旧醒着，独自而安静的与整个世界对峙。<span class="br"></span>窗外淅淅沥沥的下了雨，雨在脚下汇成一条不知流往何处的河。湿湿滑滑的...
+</div>
+</a>
+
+
+
+
+<div class="fav-btn">
+    <a class="a-show-login" data-tkind="1015" data-tid="230633003" href="http://www.douban.com/note/230633003/">192 <i>♥</i></a>
+</div>
+</div>
+
+  </div>
+</div>
+
+    
+    
+<div class="section with-group group-1a">
+  
+
+
+
+
+<div class="item-a">
+<a hidefocus="" href="http://www.douban.com/photos/album/76323970/" class="item" target="_blank" onclick="moreurl(this,{fromguess:'I_76323970-K_1026-T_U', row:4, index:0, random_key:'134502477757336e5f'})">
+      
+
+
+<div class="pic">
+    <img alt="阿蒙的贰零壹贰植物（第叁季）" src="%E8%B1%86%E7%93%A3_files/p1666473216.jpg" data-src="http://img3.douban.com/view/photo/photo/public/p1666473216.jpg" height="160" width="121">
+</div>
+
+<div class="title">
+    <h3>阿蒙的贰零壹贰植物（第叁季）</h3>
+<div class="source">
+        阿蒙（休眠） 的相册
+</div>
+</div>
+  <div class="desc"></div>
+</a>
+
+
+
+
+<div class="fav-btn">
+    <a class="a-show-login" data-tkind="1026" data-tid="76323970" href="http://www.douban.com/photos/album/76323970/">600 <i>♥</i></a>
+</div>
+</div>
+
+  <div class="group">
+  
+
+
+
+
+<div class="item-b">
+<a hidefocus="" href="http://www.douban.com/note/186541451/" class="item" target="_blank" onclick="moreurl(this,{fromguess:'I_186541451-K_1015-T_U', row:4, index:1, random_key:'134502477757336e5f'})">
+      
+
+<div class="title">
+<h3>成熟是件残忍的事，但它绝不可耻。</h3>
+<div class="source">
+        艾明雅 的日记
+</div>
+</div>
+
+<div class="desc">
+    
+  成熟到底是个褒义词，还是贬义词？杨澜在接受瑞丽“关于11年间的坚守与改变”时被问到这个问题。她如此回答：“成熟在不同的年龄段有不同的...
+</div>
+</a>
+
+
+
+
+<div class="fav-btn">
+    <a class="a-show-login" data-tkind="1015" data-tid="186541451" href="http://www.douban.com/note/186541451/">5577 <i>♥</i></a>
+</div>
+</div>
+
+  
+
+
+
+
+<div class="item-b">
+<a hidefocus="" href="http://www.douban.com/note/223401068/" class="item" target="_blank" onclick="moreurl(this,{fromguess:'I_223401068-K_1015-T_U', row:4, index:2, random_key:'134502477757336e5f'})">
+      
+
+<div class="title">
+<h3>先想想你能给别人什么，再说你想要什么</h3>
+<div class="source">
+        鼹鼠的土豆 的日记
+</div>
+</div>
+
+<div class="desc">
+    
+  前情提要：<span class="br"></span>以前一直组织饭女组活动，有几对是因为我做活动成的，大家也稍微尊重一下我，爱找我倾诉。可能是天气太热的原因，心里火大，最近大家...
+</div>
+</a>
+
+
+
+
+<div class="fav-btn">
+    <a class="a-show-login" data-tkind="1015" data-tid="223401068" href="http://www.douban.com/note/223401068/">1142 <i>♥</i></a>
+</div>
+</div>
+
+  </div>
+</div>
+
+    
+    
+<div class="section">
+  
+
+
+
+
+<div class="item-a">
+<a hidefocus="" href="http://www.douban.com/photos/album/74199331/" class="item" target="_blank" onclick="moreurl(this,{fromguess:'I_74199331-K_1026-T_U', row:5, index:0, random_key:'134502477757336e5f'})">
+      
+
+
+<div class="pic">
+    <img alt="她的照片好美，但摄影师只有她自己" src="%E8%B1%86%E7%93%A3_files/p1614465316.jpg" data-src="http://img3.douban.com/view/photo/photo/public/p1614465316.jpg" height="160" width="240">
+</div>
+
+<div class="title">
+    <h3>她的照片好美，但摄影师只有她自己</h3>
+<div class="source">
+        冷眼酋长万小爷 的相册
+</div>
+</div>
+  <div class="desc"></div>
+</a>
+
+
+
+
+<div class="fav-btn">
+    <a class="a-show-login" data-tkind="1026" data-tid="74199331" href="http://www.douban.com/photos/album/74199331/">1734 <i>♥</i></a>
+</div>
+</div>
+
+  
+
+
+
+
+<div class="item-a">
+<a hidefocus="" href="http://www.douban.com/photos/album/37913367/" class="item" target="_blank" onclick="moreurl(this,{fromguess:'I_37913367-K_1026-T_U', row:5, index:1, random_key:'134502477757336e5f'})">
+      
+
+
+<div class="pic">
+    <img alt="一个人也要好好吃早饭" src="%E8%B1%86%E7%93%A3_files/p1056990236.jpg" data-src="http://img3.douban.com/view/photo/photo/public/p1056990236.jpg" height="160" width="241">
+</div>
+
+<div class="title">
+    <h3>一个人也要好好吃早饭</h3>
+<div class="source">
+        Sue. 的相册
+</div>
+</div>
+  <div class="desc"></div>
+</a>
+
+
+
+
+<div class="fav-btn">
+    <a class="a-show-login" data-tkind="1026" data-tid="37913367" href="http://www.douban.com/photos/album/37913367/">10673 <i>♥</i></a>
+</div>
+</div>
+
+  
+
+
+
+
+<div class="item-a">
+<a hidefocus="" href="http://www.douban.com/photos/album/75646154/" class="item" target="_blank" onclick="moreurl(this,{fromguess:'I_75646154-K_1026-T_U', row:5, index:2, random_key:'134502477757336e5f'})">
+      
+
+
+<div class="pic">
+    <img alt="植物笔记" src="%E8%B1%86%E7%93%A3_files/p1649553870.jpg" data-src="http://img1.douban.com/view/photo/photo/public/p1649553870.jpg" height="160" width="224">
+</div>
+
+<div class="title">
+    <h3>植物笔记</h3>
+<div class="source">
+        I R I S 的相册
+</div>
+</div>
+  <div class="desc"></div>
+</a>
+
+
+
+
+<div class="fav-btn">
+    <a class="a-show-login" data-tkind="1026" data-tid="75646154" href="http://www.douban.com/photos/album/75646154/">976 <i>♥</i></a>
+</div>
+</div>
+
+</div>
+
+    
+    
+<div class="section">
+  
+
+
+
+
+<div class="item-a">
+<a hidefocus="" href="http://www.douban.com/photos/album/43786980/" class="item" target="_blank" onclick="moreurl(this,{fromguess:'I_43786980-K_1026-T_U', row:6, index:0, random_key:'134502477757336e5f'})">
+      
+
+
+<div class="pic">
+    <img alt="水墨胶片。" src="%E8%B1%86%E7%93%A3_files/p872549642.jpg" data-src="http://img1.douban.com/view/photo/photo/public/p872549642.jpg" height="160">
+</div>
+
+<div class="title">
+    <h3>水墨胶片。</h3>
+<div class="source">
+        沈清醨 的相册
+</div>
+</div>
+  <div class="desc"></div>
+</a>
+
+
+
+
+<div class="fav-btn">
+    <a class="a-show-login" data-tkind="1026" data-tid="43786980" href="http://www.douban.com/photos/album/43786980/">795 <i>♥</i></a>
+</div>
+</div>
+
+  
+
+
+
+
+<div class="item-a">
+<a hidefocus="" href="http://www.douban.com/photos/album/62633794/" class="item" target="_blank" onclick="moreurl(this,{fromguess:'I_62633794-K_1026-T_U', row:6, index:1, random_key:'134502477757336e5f'})">
+      
+
+
+<div class="pic">
+    <img alt="每天一瓜皮(ಠ‵ω′ಠ) 2【请看描述】" src="%E8%B1%86%E7%93%A3_files/p1405904669.jpg" data-src="http://img5.douban.com/view/photo/photo/public/p1405904669.jpg" height="160" width="213">
+</div>
+
+<div class="title">
+    <h3>每天一瓜皮(ಠ‵ω′ಠ) 2【请看描述】</h3>
+<div class="source">
+        id酱 的相册
+</div>
+</div>
+  <div class="desc"></div>
+</a>
+
+
+
+
+<div class="fav-btn">
+    <a class="a-show-login" data-tkind="1026" data-tid="62633794" href="http://www.douban.com/photos/album/62633794/">1926 <i>♥</i></a>
+</div>
+</div>
+
+  
+
+
+
+
+<div class="item-a">
+<a hidefocus="" href="http://www.douban.com/photos/album/76017497/" class="item" target="_blank" onclick="moreurl(this,{fromguess:'I_76017497-K_1026-T_U', row:6, index:2, random_key:'134502477757336e5f'})">
+      
+
+
+<div class="pic">
+    <img alt="对称（paper cuttings)" src="%E8%B1%86%E7%93%A3_files/p1658889698.jpg" data-src="http://img3.douban.com/view/photo/photo/public/p1658889698.jpg" height="160" width="221">
+</div>
+
+<div class="title">
+    <h3>对称（paper cuttings)</h3>
+<div class="source">
+        Ann 的相册
+</div>
+</div>
+  <div class="desc"></div>
+</a>
+
+
+
+
+<div class="fav-btn">
+    <a class="a-show-login" data-tkind="1026" data-tid="76017497" href="http://www.douban.com/photos/album/76017497/">350 <i>♥</i></a>
+</div>
+</div>
+
+</div>
+
+    
+    
+<div class="section">
+  
+
+
+
+
+<div class="item-a item-subject">
+<a hidefocus="" href="http://music.douban.com/subject/11589065/" class="item" target="_blank" onclick="moreurl(this,{fromguess:'I_11589065-K_1003-T_U', row:7, index:0, random_key:'134502477757336e5f'})">
+      
+
+
+<div class="pic">
+    <img alt="24個比利" src="%E8%B1%86%E7%93%A3_files/s11170429.jpg" data-src="http://img5.douban.com/lpic/s11170429.jpg" height="90">
+</div>
+
+<div class="title">
+    <h3>24個比利</h3>
+    <span class="artist">表演者: 潘瑋柏</span>
+    
+        
+    <div class="rating">
+      <span class="rating-stars rating-star4">★★★☆☆</span><b>6.3</b>
+    </div>
+</div>
+  <div class="desc">
+  <div class="inner">你知道這個名字 但你真的認識這個人嗎？<span class="br"></span>你知道他很陽光嗎？<span class="br"></span>你知道他很極端嗎？<span class="br"></span>你知道他很愛折磨自己嗎？<span class="br"></span>你知道...</div>
+  </div>
+</a>
+
+
+
+</div>
+
+  
+
+
+
+
+<div class="item-a item-subject">
+<a hidefocus="" href="http://music.douban.com/subject/3264192/" class="item" target="_blank" onclick="moreurl(this,{fromguess:'I_3264192-K_1003-T_U', row:7, index:1, random_key:'134502477757336e5f'})">
+      
+
+
+<div class="pic">
+    <img alt="张悬专辑未收录歌曲合集" src="%E8%B1%86%E7%93%A3_files/s3513483.jpg" data-src="http://img1.douban.com/lpic/s3513483.jpg" height="90">
+</div>
+
+<div class="title">
+    <h3>张悬专辑未收录歌曲合集</h3>
+    <span class="artist">表演者: 张悬</span>
+    
+        
+    <div class="rating">
+      <span class="rating-stars rating-star4">★★★★☆</span><b>8.3</b>
+    </div>
+</div>
+  <div class="desc">
+  <div class="inner">其中包括一些live的表演、翻唱以及已发行但未收录在张悬个人专辑中的曲目。<span class="br"></span>张悬，这是一个温暖的女子，温度的盘旋...</div>
+  </div>
+</a>
+
+
+
+</div>
+
+  
+
+
+
+
+<div class="item-a item-subject">
+<a hidefocus="" href="http://music.douban.com/subject/10758723/" class="item" target="_blank" onclick="moreurl(this,{fromguess:'I_10758723-K_1003-T_U', row:7, index:2, random_key:'134502477757336e5f'})">
+      
+
+
+<div class="pic">
+    <img alt="Enjoy It While It Lasts" src="%E8%B1%86%E7%93%A3_files/s9129828.jpg" data-src="http://img3.douban.com/lpic/s9129828.jpg" height="90">
+</div>
+
+<div class="title">
+    <h3>Enjoy It While It Lasts</h3>
+    <span class="artist">表演者: Spector</span>
+    
+        
+    <div class="rating">
+      <span class="rating-stars rating-star4">★★★☆☆</span><b>7.9</b>
+    </div>
+</div>
+  <div class="desc">
+  <div class="inner">The album contains a total of 12 tracks and includes singles 'Chevy Thunder' and 'Celestine', which you can...</div>
+  </div>
+</a>
+
+
+
+</div>
+
+</div>
+
+    
+    
+<div class="section">
+  
+
+
+
+
+<div class="item-a item-subject">
+<a hidefocus="" href="http://music.douban.com/subject/11594360/" class="item" target="_blank" onclick="moreurl(this,{fromguess:'I_11594360-K_1003-T_U', row:8, index:0, random_key:'134502477757336e5f'})">
+      
+
+
+<div class="pic">
+    <img alt="...3mm" src="%E8%B1%86%E7%93%A3_files/s11174529.jpg" data-src="http://img5.douban.com/lpic/s11174529.jpg" height="90">
+</div>
+
+<div class="title">
+    <h3>...3mm</h3>
+    <span class="artist">表演者: 陈奕迅</span>
+    
+        
+    <div class="rating">
+      <span class="rating-stars rating-star4">★★★☆☆</span><b>7.6</b>
+    </div>
+</div>
+  <div class="desc">
+  <div class="inner">陳奕迅2012全新廣東大碟「...3mm」<span class="br"></span>Swing x Eason 製造跳躍及唱盡買不到的人生<span class="br"></span>10首新作包括勝利主打「重口味」及...</div>
+  </div>
+</a>
+
+
+
+</div>
+
+  
+
+
+
+
+<div class="item-a item-subject">
+<a hidefocus="" href="http://book.douban.com/subject/10464337/" class="item" target="_blank" onclick="moreurl(this,{fromguess:'I_10464337-K_1001-T_U', row:8, index:1, random_key:'134502477757336e5f'})">
+      
+
+
+<div class="pic">
+    <img alt="三国机密（上）" src="%E8%B1%86%E7%93%A3_files/s8507948.jpg" data-src="http://img3.douban.com/lpic/s8507948.jpg" height="120">
+</div>
+
+<div class="title">
+    <h3>三国机密（上）</h3>
+    <span class="artist">作者: 马伯庸</span>
+    
+        
+    <div class="rating">
+      <span class="rating-stars rating-star4">★★★★☆</span><b>9.0</b>
+    </div>
+</div>
+  <div class="desc">
+  <div class="inner">东汉末年，天下大乱。曹操迎汉献帝至许都，此后，“奉天子以令不臣”，逐渐集军权、政权于一身，开始了自己政治生...</div>
+  </div>
+</a>
+
+
+
+</div>
+
+  
+
+
+
+
+<div class="item-a item-subject">
+<a hidefocus="" href="http://book.douban.com/subject/10827882/" class="item" target="_blank" onclick="moreurl(this,{fromguess:'I_10827882-K_1001-T_U', row:8, index:2, random_key:'134502477757336e5f'})">
+      
+
+
+<div class="pic">
+    <img alt="悉尼！" src="%E8%B1%86%E7%93%A3_files/s11138198.jpg" data-src="http://img3.douban.com/lpic/s11138198.jpg" height="120">
+</div>
+
+<div class="title">
+    <h3>悉尼！</h3>
+    <span class="artist">作者: (日)村上春树</span>
+    
+        
+    <div class="rating">
+      <span class="rating-stars rating-star4">★★★★☆</span><b>9.2</b>
+    </div>
+</div>
+  <div class="desc">
+  <div class="inner">当村上春树谈奥运时，他谈些什么？<span class="br"></span>你以为只看电视，就能看透奥林匹克的一切？<span class="br"></span>以悉尼奥运为切入点，村上春树坦诚...</div>
+  </div>
+</a>
+
+
+
+</div>
+
+</div>
+
+    
+    
+<div class="section">
+  
+
+
+
+
+<div class="item-a item-subject">
+<a hidefocus="" href="http://book.douban.com/subject/4173402/" class="item" target="_blank" onclick="moreurl(this,{fromguess:'I_4173402-K_1001-T_U', row:9, index:0, random_key:'134502477757336e5f'})">
+      
+
+
+<div class="pic">
+    <img alt="昨日之旅" src="%E8%B1%86%E7%93%A3_files/s4195826.jpg" data-src="http://img3.douban.com/lpic/s4195826.jpg" height="120">
+</div>
+
+<div class="title">
+    <h3>昨日之旅</h3>
+    <span class="artist">作者: [奥地利]茨威格</span>
+    
+        
+    <div class="rating">
+      <span class="rating-stars rating-star4">★★★★☆</span><b>8.3</b>
+    </div>
+</div>
+  <div class="desc">
+  <div class="inner">《昨日之旅》是《一个陌生女人的来信》作者斯台芬·茨威格的遗作，由国内最权威的茨威格研究和翻译家张玉书先生鼎...</div>
+  </div>
+</a>
+
+
+
+</div>
+
+  
+
+
+
+
+<div class="item-a item-subject">
+<a hidefocus="" href="http://book.douban.com/subject/11501640/" class="item" target="_blank" onclick="moreurl(this,{fromguess:'I_11501640-K_1001-T_U', row:9, index:1, random_key:'134502477757336e5f'})">
+      
+
+
+<div class="pic">
+    <img alt="柔软" src="%E8%B1%86%E7%93%A3_files/s11134243.jpg" data-src="http://img1.douban.com/lpic/s11134243.jpg" height="120">
+</div>
+
+<div class="title">
+    <h3>柔软</h3>
+    <span class="artist">作者: 廖一梅</span>
+    
+        
+    <div class="rating">
+      <span class="rating-stars rating-star4">★★★★☆</span><b>9.0</b>
+    </div>
+</div>
+  <div class="desc">
+  <div class="inner">《柔软》内容简介：历时十一年的“悲观主义三部曲”首度集结，三个剧本，记录了编剧内心情感世界的变迁，抛开世俗...</div>
+  </div>
+</a>
+
+
+
+</div>
+
+  
+
+
+
+
+<div class="item-a item-subject">
+<a hidefocus="" href="http://movie.douban.com/subject/6005591/" class="item" target="_blank" onclick="moreurl(this,{fromguess:'I_6005591-K_1002-T_U', row:9, index:2, random_key:'134502477757336e5f'})">
+      
+
+
+<div class="pic">
+    <img alt="屋顶的公寓" src="%E8%B1%86%E7%93%A3_files/s4662348.jpg" data-src="http://img3.douban.com/lpic/s4662348.jpg" height="120">
+</div>
+
+<div class="title">
+    <h3>屋顶的公寓</h3>
+    <span class="artist">导演: 吉田晓生</span>
+    
+        
+    <div class="rating">
+      <span class="rating-stars rating-star4">★★★☆☆</span><b>7.1</b>
+    </div>
+</div>
+  <div class="desc">
+  <div class="inner">女星长泽雅美接拍了将于3月21日播出的TBS电视台特别日剧《有屋顶平台的公寓》，该剧改编自著名随笔作家阿川佐和子...</div>
+  </div>
+</a>
+
+
+
+</div>
+
+</div>
+
+<script>
+Do(function(){
+    $('.guess-list img').each(function(){
+        this.src = this.getAttribute('data-src');
+    });
+});
+</script>
+
+    </div>
+
+            </div>
+
+            <div class="side">
+                
+    <div id="db-sidesrh" class="mod">
+        <form action="http://www.douban.com/search" method="get">
+    <span class="inp"><input style="color: rgb(212, 212, 212); width: 140px;" value="成员、小组、音乐人" maxlength="60" size="12" title="" name="search_text" autocomplete="off" type="text"></span>
+    <span class="hide">
+    <select name="cat">
+    <option selected="selected" value="">综合</option>
+    <option value="1005">成员</option>
+    <option value="1019">小组</option>
+    <option value="2002">音乐人</option>
+    <option value="1001">书籍</option>
+    <option value="1002">电影</option>
+    <option value="1003">音乐</option>
+    </select>
+    </span><div style="width: 44px;" class="submenu"><div class="selected">综合<span>+</span></div><div class="menu hide"><ul><li class="hide"><a href="#0">综合</a></li><li><a href="#1">成员</a></li><li><a href="#2">小组</a></li><li><a href="#3">音乐人</a></li><li class="line">&nbsp;</li><li><a href="#4">书籍</a></li><li><a href="#5">电影</a></li><li><a href="#6">音乐</a></li></ul></div></div>
+    <span><input value="搜索" class="bn-srh" type="submit"></span>
+    </form>
+    </div>
+
+    
+
+    <!-- douban ad begin -->
+    
+    <div id="dale_anonymous_home_page_top_middle"><iframe style="overflow: hidden;" class="mb20" id="dale_anonymous_home_page_top_middle_frame" frameborder="0" height="245" scrolling="no" width="245"></iframe></div>
+    <!-- douban ad end -->
+
+    <!-- douban tribe begin -->
+    
+
+<div class="notify-mod">
+    <a href="http://www.douban.com/subject/explore">发现喜欢的东西</a>
+</div>
+
+    <!-- douban tribe end -->
+
+
+
+                
+<div class="mod" id="db-online-events">
+    <div class="hd">
+        
+    <h2>
+        线上活动
+            &nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·
+            <span class="pl">&nbsp;(
+                    <a href="http://www.douban.com/online/?g=d">更多</a>
+                ) </span>
+    </h2>
+
+    </div>
+    <div class="bd">
+        
+        
+        
+<ul class="clearbox">
+        <li class="block clearfix">
+            <div class="title">
+                <a href="http://www.douban.com/online/11148052/">把你收藏的搞笑图片都拿出来晒晒吧</a>
+            </div>
+            <div class="desc">
+                时间：6月15日 - 9月14日
+                <br><span class="num">4531人参加</span>
+            </div>
+        </li>
+        <li class="block clearfix">
+            <div class="title">
+                <a href="http://www.douban.com/online/11241613/">把你们学摄影的点点滴滴传上来吧</a>
+            </div>
+            <div class="desc">
+                时间：8月14日 - 9月13日
+                <br><span class="num">55人参加</span>
+            </div>
+        </li>
+        <li class="block clearfix">
+            <div class="title">
+                <a href="http://www.douban.com/online/11233730/">看照片猜景点  你都游过哪些地方？</a>
+            </div>
+            <div class="desc">
+                时间：8月8日 - 10月31日
+                <br><span class="num">1778人参加</span>
+            </div>
+        </li>
+        <li class="block clearfix">
+            <div class="title">
+                <a href="http://www.douban.com/online/11231783/">爱的告白！我爱了你那么多年，最后，我终于明白了……</a>
+            </div>
+            <div class="desc">
+                时间：8月7日 - 9月29日
+                <br><span class="num">1110人参加</span>
+            </div>
+        </li>
+        <li class="block clearfix">
+            <div class="title">
+                <a href="http://www.douban.com/online/11213797/">一句动漫台词，代表你此时的心情</a>
+            </div>
+            <div class="desc">
+                时间：7月30日 - 8月29日
+                <br><span class="num">1415人参加</span>
+            </div>
+        </li>
+        <li class="block clearfix">
+            <div class="title">
+                <a href="http://www.douban.com/online/11240067/">翻出你的日记本，晒出曾经的回忆....</a>
+            </div>
+            <div class="desc">
+                时间：8月13日 - 11月12日
+                <br><span class="num">308人参加</span>
+            </div>
+        </li>
+        <li class="block clearfix">
+            <div class="title">
+                <a href="http://www.douban.com/online/11203425/">看截图猜电影</a>
+            </div>
+            <div class="desc">
+                时间：7月23日 - 8月31日
+                <br><span class="num">6319人参加</span>
+            </div>
+        </li>
+        <li class="block clearfix">
+            <div class="title">
+                <a href="http://www.douban.com/online/11240536/">写词拍照制作苏打绿MV~</a>
+            </div>
+            <div class="desc">
+                时间：8月13日 - 11月12日
+                <br><span class="num">172人参加</span>
+            </div>
+        </li>
+        <li class="block clearfix">
+          <div id="dale_homepage_online_activity_promo_1"><iframe style="overflow: hidden;" class="mb20" id="dale_homepage_online_activity_promo_1_frame" frameborder="0" height="50" scrolling="no" width="245"></iframe></div>
+        </li>
+        <li class="block clearfix">
+          <div id="dale_homepage_online_activity_promo_2"><iframe style="overflow: hidden;" class="mb20" id="dale_homepage_online_activity_promo_2_frame" frameborder="0" height="50" scrolling="no" width="245"></iframe></div>
+        </li>
+</ul>
+
+        
+    </div>
+</div>
+
+
+                <div class="mod">
+                    
+
+<div id="db-sites">
+    <div class="hd">
+        
+    <h2>
+        发现小组
+            &nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·
+            <span class="pl">&nbsp;(
+                    <a href="http://www.douban.com/explore/group">更多</a>
+                ) </span>
+    </h2>
+
+    </div>
+    <div class="bd">
+        <div class="content">
+            
+        <div class="item">
+            <div class="pic">
+                <a href="http://www.douban.com/group/bingchen/">
+                    <img src="%E8%B1%86%E7%93%A3_files/g119486-2.jpg" alt="哈尔滨影迷会" height="48" width="48">
+                </a>
+            </div>
+            <div class="info">
+                <h3><a href="http://www.douban.com/group/bingchen/">哈尔滨影迷会</a></h3>
+                1604成员
+            </div>
+        </div>
+        <div class="item">
+            <div class="pic">
+                <a href="http://www.douban.com/group/270700/">
+                    <img src="%E8%B1%86%E7%93%A3_files/g270700-3.jpg" alt="电影主题截图" height="48" width="48">
+                </a>
+            </div>
+            <div class="info">
+                <h3><a href="http://www.douban.com/group/270700/">电影主题截图</a></h3>
+                1578成员
+            </div>
+        </div>
+        <div class="item">
+            <div class="pic">
+                <a href="http://www.douban.com/group/SkinnyPeople/">
+                    <img src="%E8%B1%86%E7%93%A3_files/g143400-5.jpg" alt="纸片人" height="48" width="48">
+                </a>
+            </div>
+            <div class="info">
+                <h3><a href="http://www.douban.com/group/SkinnyPeople/">纸片人</a></h3>
+                11356成员
+            </div>
+        </div>
+        <div class="item">
+            <div class="pic">
+                <a href="http://www.douban.com/group/159568/">
+                    <img src="%E8%B1%86%E7%93%A3_files/g159568-2.jpg" alt="艺术图片馆" height="48" width="48">
+                </a>
+            </div>
+            <div class="info">
+                <h3><a href="http://www.douban.com/group/159568/">艺术图片馆</a></h3>
+                5000成员
+            </div>
+        </div>
+
+        </div>
+    </div>
+</div>
+
+                </div>
+
+                <!-- douban app begin -->
+                
+
+
+
+
+
+<div class="mobile-app-entrance block5 app-main">
+
+    <a class="entrance-link first-link" href="http://www.douban.com/mobile/">
+        <span class="app-icon icon-main"></span>
+        <span class="main-title">豆瓣移动应用</span>
+        <span class="sub-title">点击下载</span>
+    </a>
+</div>
+
+                <!-- douban app end -->
+
+            </div>
+        </div>
+
+        <div id="ft">
+            
+            
+<span id="icp" class="fleft gray-link">
+    © 2005－2012 douban.com, all rights reserved
+  <br>
+  <a href="http://www.miibeian.gov.cn/">京ICP证090015号</a>&nbsp;&nbsp;京ICP备11027288号&nbsp;&nbsp;网络视听许可证<a href="http://www.douban.com/about?topic=licence" target="_blank">0110418</a>号&nbsp;&nbsp;文网文[2009]267号&nbsp;<img src="%E8%B1%86%E7%93%A3_files/biaoshi.gif" align="absmiddle"><br> 京公网安备110105000728&nbsp;&nbsp;新出网证(京)字129号
+</span>
+
+<span class="fright">
+    <a href="http://www.douban.com/about">关于豆瓣</a>
+    · <a href="http://www.douban.com/jobs">在豆瓣工作</a>
+    · <a href="http://www.douban.com/about?topic=contactus">联系我们</a>
+    · <a href="http://www.douban.com/about?policy=disclaimer">免责声明</a>
+    
+    · <a href="http://www.douban.com/help/">帮助中心</a>
+    · <a href="http://developers.douban.com/" target="_blank">开发者</a>
+    · <a href="http://www.douban.com/mobile/">移动应用</a>
+    · <a href="http://www.douban.com/partner/">豆瓣广告</a>
+</span>
+
+
+        </div>
+    </div>
+    
+    <script async="true" src="%E8%B1%86%E7%93%A3_files/packed_jquery.js" type="text/javascript"></script><script async="true" src="%E8%B1%86%E7%93%A3_files/packed_base7286915874.js" type="text/javascript"></script><link href="%E8%B1%86%E7%93%A3_files/packed_dialog4563741467.css" rel="stylesheet" type="text/css"><script async="true" src="%E8%B1%86%E7%93%A3_files/packed_dialog429925323.js" type="text/javascript"></script><script src="%E8%B1%86%E7%93%A3_files/packed__init_7701316160.js" data-cfg-corelib="http://img3.douban.com/js/packed_jquery.min6301986802.js"></script>
+    <script type="text/javascript">
+    var email_id='form_email';
+var pwd_id='form_password';
+Do(function(){var a=$("#"+email_id);var b="邮箱/手机号";a.focus(function(){var c=$(this);if(c.val()===b){c.val("").css("color","#000")}}).blur(function(){var c=$(this);if(!c.val()){c.val(b).css("color","#ccc")}});if(a.val()&&a.val()!=b){$("#"+pwd_id).focus()}else{a.css("color","#ccc")}});
+    
+    Do(function(){
+            var act = [
+                    'http://www.douban.com/search',
+                    'http://www.douban.com/search',
+                    'http://www.douban.com/search',
+                    'http://www.douban.com/search',
+                    'http://book.douban.com/subject_search',
+                    'http://movie.douban.com/subject_search',
+                    'http://music.douban.com/subject_search'
+            ];
+
+            $('#db-sidesrh form').prettyField(function(i, sel, frm){
+                frm.attr('action', act[i]);
+             });
+
+            $($('#db-sidesrh .menu li')[3]).after('<li class="line">&nbsp;</li>');
+            $('#db-sidesrh form').attr('action', act[$('#db-sidesrh select')[0].selectedIndex]);
+   });
+   
+    Do.ready(function(){
+        Do.preload(['http://img3.douban.com/js/separation/packed__all295341955.js','http://img3.douban.com/js/packed_douban7796659906.js']);
+        $('.guess-list', '#bd').find(".item").hover(function(){$(this).addClass("mover")},function(){$(this).removeClass("mover")})
+    });
+    </script>
+    
+    <!-- douban ad begin -->
+    
+
+
+
+
+<script type="text/javascript">
+    (function (global) {
+        var newNode = global.document.createElement('script'),
+            existingNode = global.document.getElementsByTagName('script')[0],
+            adSource = 'http://erebor.douban.com/',
+            userId = '',
+            browserId = 'qz7AJkjWE7E',
+            ipAddress = '121.33.190.180',
+            criteria = '3:/',
+            preview = '',
+            debug = false,
+            adSlots = ['dale_anonymous_home_page_top_middle', 'dale_anonymous_home_page_left_middle', 'dale_explore_home_right_bottom', 'dale_homepage_online_activity_promo_1', 'dale_homepage_online_activity_promo_2'];
+
+        global.DoubanAdRequest = {src: adSource, uid: userId, bid: browserId, ip: ipAddress, crtr: criteria, prv: preview, debug: debug};
+        global.DoubanAdSlots = (global.DoubanAdSlots || []).concat(adSlots);
+
+        newNode.setAttribute('type', 'text/javascript');
+        newNode.setAttribute('src', 'http://img3.douban.com/js/packed_ad533989358.js');
+        newNode.setAttribute('async', true);
+        existingNode.parentNode.insertBefore(newNode, existingNode);
+    })(this);
+</script>
+
+
+
+
+    <!-- douban ad end -->
+
+<script>var _check_hijack = function () {
+            var _sig = "qz7AJkjW", _login = false, bid = get_cookie('bid');
+            if (location.protocol != "file:" && (typeof(bid) != "string" && _login || typeof(bid) == "string" && bid.substring(0,8) != _sig)) {
+                location.href+=(/\?/.test(location.href)?"&":"?") + "_r=" + Math.random().toString(16).substring(2);
+            }};
+            if (typeof(Do) != 'undefined') Do(_check_hijack);
+            else if (typeof(get_cookie) != 'undefined') _check_hijack();
+            </script>
+
+
+<object data="%E8%B1%86%E7%93%A3_files/packed__all295341955.js" height="0" width="0"></object><object data="%E8%B1%86%E7%93%A3_files/packed_douban7796659906.js" height="0" width="0"></object></body></html>
+
+
+<script src='jquery.js'></script>
+<script src='dtv.js'></script>

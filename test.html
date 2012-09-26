@@ -21,7 +21,12 @@
 	<div >div2ff</div>
 	<div >div2</div>
 	<div >div3</div>
-	<div id='dd4' >div4</div>
+	<div id='dd4' >div4
+		<script>
+			alert('come on');
+			var fooo = 'aaa';
+		</script>
+	</div>
 </div>
 <script>
 //alert($('#d1').width());//alert 35;
@@ -44,10 +49,45 @@ $(document).ready(function() {
 	}
 	
 	var next = $('#dd1');
-	
+	alert(getDepth($('#d2')))
 	//alert($(next).parent().next().size());
-	while(next = getNext(next)) alert($(next).html());
+	//while(next = getNext(next)) alert($(next).html());
 	//alert($('body').next().size());
+	
+	unScript($('#d2'));
+	//alert($('#d2').html());
+	
+	$('body').append($('#d2').html());
+	onScript($('#d2'));
+	
+	function unScript(dom) {
+		//alert($(dom)[0].tagName)
+		if($(dom)[0].tagName == 'SCRIPT') {
+			$(dom).append('}');
+			$(dom).prepend('function foo(){');
+			return ;
+		}
+		for(var i=0;i<$(dom).children().size();i++)
+			unScript($(dom).children().eq(i));
+	}
+	
+	function onScript(dom){
+		if($(dom)[0].tagName == 'SCRIPT') {
+			$(dom).html($(dom).html().slice(15,-1));
+			return ;
+		}
+		for(var i=0;i<$(dom).children().size();i++)
+			onScript($(dom).children().eq(i));
+	}
+	function getDepth(dom){
+		var num = 0;
+		while($(dom).parent().size() != 0)
+		{
+			dom = $(dom).parent();
+			num ++;
+		}
+		return num;
+	}
 })
 
 </script>
